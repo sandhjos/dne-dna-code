@@ -21,7 +21,7 @@ def generate_fortune() -> str:
 def generate_lucky_numbers(how_many: int) -> list:
     """Returns a list of (random) 'lucky' numbers."""
     lucky_numbers = []
-    for _ in range(how_many):
+    for i in range(how_many):
         lucky_numbers.append(random.randint(0, 99))
     return lucky_numbers
 
@@ -35,7 +35,10 @@ def create_fortune_cookie_message(how_many_lucky_numbers: int) -> str:
     # generate_lucky_numbers() and then composing and returning the fortune
     # cookie's message.
 
-    raise NotImplementedError()
+    #raise NotImplementedError()
+    
+    return generate_fortune() ,generate_lucky_numbers(how_many_lucky_numbers)
+
 
 
 def main():
